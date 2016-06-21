@@ -17,4 +17,19 @@ class String
 			class_eval(method_text)
 		end
 	end
+
+	def self.colors
+		puts @@colors_list
+	end
+
+	def self.sample_colors
+		@@colors.each do |color, code|
+			puts "\e[#{code}m#{color}\e[0m"
+		end
+	end
 end
+
+#Test String class additions
+String.create_colors
+String.sample_colors
+String.colors
