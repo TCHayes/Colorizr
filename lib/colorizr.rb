@@ -5,4 +5,16 @@ class String
 	#use .zip to merge two arrays above into one array made up of [color, code] arrays for each color.
 	@@colors = @@colors_list.zip(@@color_codes)
 		#http://ruby-doc.org/core-2.2.0/Array.html#method-i-zip Imagine two sides of a zipper with each array item as a zipper tang.
+
+	#Use metaprogramming to define all color methods via one method "create_colors"
+	def self.create_colors
+		@@colors.each do |color, code|
+			method_text = %Q{
+				def #{color}
+					"\e[#{code}m\#{self}\e[0m"
+				end
+			}
+			class_eval(method_text)
+		end
+	end
 end
