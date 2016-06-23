@@ -24,6 +24,7 @@ class String
 
 	def self.sample_colors
 		@@colors.each do |color, code|
+		#This doesn't feel DRY. Should be able to just call color.color but I don't know how to interpolate outside of strings (for methods)	
 			puts "\e[#{code}m#{color}\e[0m"
 		end
 	end

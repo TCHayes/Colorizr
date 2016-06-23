@@ -1,0 +1,13 @@
+How does your gem take advantage of Ruby’s metaprogramming capabilities?
+My gem uses class_eval in the create_colors method to create all of the color methods.
+
+And, the following reflections:
+
+How long did you spend working on this project?
+Longer than I should have, based on starts and stops. Also spent some time trying to figure out one specific area where I felt my code should be DRYer, but wasn’t able to find a suitable solution.
+
+What was the most rewarding challenge you conquered?
+The project was small enough that the main rewarding challenge was just getting it all to work. Testing the code and seeing the output light up in different colors was a good feeling.
+
+Where do you still have room to grow?
+I still don’t have a solid grasp of metaprogramming, and feel like I’m just sort of searching online and tweaking things to get it to work vs truly understanding what’s happening. That said, this code project helped me understand things better than I did at the end of the lesson.
