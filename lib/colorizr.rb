@@ -23,14 +23,14 @@ class String
 	end
 
 	def self.sample_colors
-		@@colors.each do |color, code|
-		#This doesn't feel DRY. Should be able to just call color.color but I don't know how to interpolate outside of strings (for methods)	
-			puts "\e[#{code}m#{color}\e[0m"
+		@@colors_list.each do |color|
+			puts "#{color}".send(color)
 		end
 	end
 end
 
-#Test String class additions
 String.create_colors
-String.sample_colors
-String.colors
+
+#For Testing...
+#String.sample_colors
+#String.colors
